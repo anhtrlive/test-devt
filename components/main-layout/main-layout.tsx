@@ -11,8 +11,8 @@ export default function MainLayOut({ children }: Props) {
   return (
     <>
       <Head>
-        <meta name="description" content="" />
-        <meta name="keywords" content="" />
+        <meta name="description" content="description" />
+        <meta name="keywords" content="keywords" />
         <meta name="author" content="" />
         <meta name="viewport" content="" />
       </Head>
