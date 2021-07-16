@@ -1,22 +1,22 @@
-import axios from 'axios';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import TextareaAutosize from 'react-textarea-autosize';
-import { CreateNewPostBtn, SectionPost, SectionText } from './styled';
+import axios from 'axios'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import TextareaAutosize from 'react-textarea-autosize'
+import { CreateNewPostBtn, SectionPost, SectionText } from './styled'
 
 export default function NewPost() {
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
-  const router = useRouter();
+  const [title, setTitle] = useState('')
+  const [body, setBody] = useState('')
+  const router = useRouter()
 
   const createPost = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     await axios.post(`${process.env.API_URL}/posts`, {
       body,
       title,
-    });
-    router.push('/');
-  };
+    })
+    router.push('/')
+  }
 
   return (
     <SectionPost>
@@ -27,7 +27,7 @@ export default function NewPost() {
             minRows={1}
             value={title}
             onChange={(e) => {
-              setTitle(e.target.value);
+              setTitle(e.target.value)
             }}
           />
         </h1>
@@ -37,12 +37,12 @@ export default function NewPost() {
             minRows={5}
             value={body}
             onChange={(e) => {
-              setBody(e.target.value);
+              setBody(e.target.value)
             }}
           />
-          <CreateNewPostBtn type="submit">Create new post</CreateNewPostBtn>
+          <CreateNewPostBtn type="submit">Create new post 2</CreateNewPostBtn>
         </SectionText>
       </form>
     </SectionPost>
-  );
+  )
 }

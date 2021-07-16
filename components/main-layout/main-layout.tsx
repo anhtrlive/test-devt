@@ -24,9 +24,7 @@ export default function MainLayOut({ children }: Props) {
             </Link>
           </li>
           <li>
-            <Link href="/posts/new">
-              <a>Create new post</a>
-            </Link>
+            <Link href="/posts/new">Create new post 2222222</Link>
           </li>
         </ul>
       </Navigation>
